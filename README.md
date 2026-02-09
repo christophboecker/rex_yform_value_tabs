@@ -24,7 +24,7 @@ Die Ursache ist die Reihenfolge der Formularbearbeitung. Die Lösung ist: Änder
 Nicht mehr das einzelne Tab-Element baut sein HTML zusammen, sondern das letzte Tab-Value, das die Tab-Gruppe abschließt,
 übernimmt die Aufgabe für alle.
 
-Zu diesem Zeitpunkt sind auch bei den innen liegenden Values mit ihren `enterObject` durch.
+Zu diesem Zeitpunkt sind auch die innen liegenden Values mit ihren `enterObject` durch.
 So werden auch Fehler aus z.B. Sub-Formularen berücksichtigt und sichtbar gemacht.
 
 ## Warum kein PR für yform_field?
