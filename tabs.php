@@ -230,22 +230,22 @@ class rex_yform_value_tabs extends rex_yform_value_abstract
                 ],
                 'default' => [
                     'type' => 'choice',
-                    'label' => rex_i18n::msg('igor_yf_values_tabs_active_label'),
-                    'choices' => rex_i18n::rawMsg('igor_yf_values_tabs_active_options'),
+                    'label' => rex_i18n::msg('yform_values_tabs_active_label'),
+                    'choices' => rex_i18n::rawMsg('yform_values_tabs_active_options'),
                     'expanded' => '1',
                     'default' => '1',
-                    'notice' => rex_i18n::msg('igor_yf_values_tabs_active_notice'),
+                    'notice' => rex_i18n::msg('yform_values_tabs_active_notice'),
                 ],
                 'group_by' => [
                     'type' => 'text',
-                    'label' => rex_i18n::msg('igor_yf_values_tabs_cluster_label'),
-                    'notice' => rex_i18n::msg('igor_yf_values_tabs_cluster'),
+                    'label' => rex_i18n::msg('yform_values_tabs_cluster_label'),
+                    'notice' => rex_i18n::msg('yform_values_tabs_cluster'),
                 ],
             ],
             'validates' => [
                 ['customfunction' => ['name' => 'prio', 'function' => [$this, 'validateTabOrder']]],
             ],
-            'description' => rex_i18n::msg('igor_yf_values_tabs_description'),
+            'description' => rex_i18n::msg('yform_values_tabs_description'),
             'dbtype' => 'none',
             'is_searchable' => false,
             'is_hiddeninlist' => true,
@@ -347,7 +347,7 @@ class rex_yform_value_tabs extends rex_yform_value_abstract
             $end = end($group);
             if ($prio > $start['prio'] && $prio < $end['prio']) {
                 $error = rex_i18n::msg(
-                    'igor_yf_values_tabs_setup_prio_error',
+                    'yform_values_tabs_setup_prio_error',
                     $elements[$field]->getLabel(),
                     $start['group_by'],
                     $start['label'],
